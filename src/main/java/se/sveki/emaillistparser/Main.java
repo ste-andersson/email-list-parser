@@ -8,5 +8,6 @@ public class Main {
         System.out.println("Give me a file path to a list of email addresses!");
         Scanner scanner = new Scanner(System.in);
         String filePath = scanner.nextLine();
+        InputFileHandler inputFile = new InputFileHandler(filePath);
     }
 }
