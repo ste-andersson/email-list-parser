@@ -14,7 +14,6 @@ class InputFileHandlerTest {
 
     @BeforeEach
     void setUp() throws Exception {
-        // 1. Hämta testfilen från src/test/resources
         URL url = getClass().getClassLoader().getResource("testInput.txt");
         assertNotNull(url, "testInput.txt not found in src/test/resources");
         String filePath = Path.of(url.toURI()).toString();

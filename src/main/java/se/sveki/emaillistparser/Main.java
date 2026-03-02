@@ -9,5 +9,9 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         String filePath = scanner.nextLine();
         InputFileHandler inputFile = new InputFileHandler(filePath);
+        System.out.println("Ok, where should I put the output?");
+        String destinationPath = scanner.nextLine();
+        OutputFileHandler outputFile = new OutputFileHandler(inputFile.getInputFileLines(),destinationPath);
+        outputFile.process();
     }
 }
